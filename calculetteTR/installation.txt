@@ -1,0 +1,49 @@
+*** An old but still very functional TR managment webapp ***
+
+Turn a 3 hour manual excel computation with possible errors into an easy 20 minutes error free scan job!! 
+
+This program provides an ONLINE solution for restaurant owners that need to prepare TR bundles before sending them in for
+payment. 
+
+Using a properly configured handheld USB scanner, can scan each TR and have them stored into a database session
+then visualise the automatically filled final bordereau to place on top of the bundle !! check the result against your cash 
+register ticket and off you go!!
+
+Make stats and searches through the database and quickly get data for your accountant.
+
+Professional solutions will cost you at least 400 euros a year... this one is FREE !!
+
+
+
+I. Installation procedure
+
+
+1. Create a database on mysql server
+
+2. Import the db.sql file into that database
+
+2. Create a user with password on that database having all the rights
+
+3. fill the information inside the file db/cnx.php
+	$serveur = "localhost";
+	$base = "**DB_name**";
+	$user = "**DB_user**";
+	$pass = "**DB_user_password**";
+	
+4. Edit the Meta/metatags.php as you wish
+
+5. Upload the folder to you web server root
+
+6.  Access the program https://your_domain/calculetteTR
+
+
+II. Handheld USB scanner configuration
+
+1. Enable USB Interface
+
+2. Enable interfleaves 2 of 5
+
+3. Bi-Directional Mode
+
+4. caps_lock emulation
+

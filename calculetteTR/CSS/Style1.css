@@ -1,0 +1,356 @@
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #77A1F9;
+	font-size:12px;
+	background-color: #494949;
+}
+
+/* ~~ Sélecteurs d'éléments/balises ~~ */
+ul, ol, dl { /* En raison des variations entre les navigateurs, il est conseillé d'attribuer une valeur de zéro aux marges intérieures et aux marges des listes. A des fins de cohérence, vous pouvez définir les valeurs désirées dans cette zone ou dans les éléments de liste (LI, DT, DD) qu'elle contient. N'oubliez pas que les paramètres que vous définissez ici se répercuteront sur la liste .nav, sauf si vous rédigez un sélecteur plus spécifique. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la suppression de la marge supérieure résout un problème où les marges sortent de leur div conteneur. La marge inférieure restante l'éloignera de tout élément qui suit. */
+	padding-right: 15px;
+	padding-left: 15px; /* l'ajout de la marge intérieure aux côtés des éléments à l'intérieur des divs, et non aux divs proprement dit, évite le recours à des calculs de modèle de boîte. Une autre méthode consiste à employer une div imbriquée avec marge intérieure latérale. */
+}
+hr {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 30%;
+	margin-right: 30%;
+	border-style: inset;
+	border-width: 1px;
+}
+a img { /* ce sélecteur élimine la bordure bleue par défaut affichée dans certains navigateurs autour d'une image lorsque celle-ci est entourée d'un lien. */
+	border: none;
+}
+
+/* ~~ La définition du style des liens de votre site doit respecter cet ordre, y compris le groupe de sélecteurs qui créent l'effet de survol. ~~ */
+a:link {
+	color: #77A1F9;
+	text-decoration: underline; /* à moins que vous ne définissiez un style particulièrement exclusif pour vos liens, mieux vaut prévoir un soulignement, qui garantit une identification visuelle rapide. */
+}
+a:visited {
+	color: #2B2D2D;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* ce groupe de sélecteurs offrira à un navigateur au clavier la même expérience de survol que celle d'une personne employant la souris. */
+	text-decoration: none;
+}
+
+table{
+	border-left:1px solid #FFFFFF;
+}
+
+table td{
+	padding-left:30px;
+	border-bottom: 1px dotted #FFFFFF;
+}
+
+
+.container {
+	overflow:auto;
+	float:left;
+	width: 1200px;
+	height:520px;
+	margin: 0 auto; /* la valeur automatique sur les côtés, associée à la largeur, permet de centrer la mise en page */
+	background-color: #696969;
+	min-width: 1150px;
+	max-height:520px;
+	box-shadow: -1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+
+.header {
+	width:1200px;
+	height:70px;
+	background-image: url("../pics/headerbg.png");
+	min-width: 1200px;
+	max-height:70px;
+	box-shadow: -1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.content {
+	padding: 10px 0;
+	width:1000px;
+	min-width: 1000px;
+	float: left;
+}
+.sidebarright {
+	float: left;
+	width:180px;
+	height:423px;
+	background: #29282B;
+	padding: 10px 0;
+	margin-top:7px;
+	border-radius:10px 10px 0px 0px;
+}
+
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* cette marge intérieure reflète la marge intérieure droite dans les en-têtes et la règle de paragraphe ci-dessus. Une marge intérieure a été placée en bas, afin d'assurer un espace entre les autres éléments des listes, et à gauche pour créer le retrait. Vous pouvez les régler comme bon vous semble. */
+}
+
+.footer {
+	padding: 10px 0;
+	background: #CCC49F;
+	position: relative;/* donne hasLayout à IE6 de façon à permettre un effacement correct */
+	clear: both; /* cette propriété d'effacement force le .container à comprendre où se terminent les colonnes et à les contenir */
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+div.welcome{                   /* Div de Bienvenue dans mainboard*/
+	text-align:center;
+	width:400px;
+	border: 1px double #77A1F9;
+	border-radius:20px;
+	width:50%;
+	margin:auto;
+	margin-top:70px;
+}
+
+div.splash{                   /* Div de A PROPOS dans mainboard*/
+	text-align:center;
+	width:400px;
+	height:400px;
+	background-image:url(../pics/splash.png);
+	border: 1px double #77A1F9;
+	border-radius:20px;
+}
+
+div.centerit{                   /* Div de centrage */
+	text-align:center;
+	margin-top:10px;
+}
+
+
+
+div.bordertitre{                   /* Div de centrage */
+	margin-top:10px;
+	width:500px;
+	border: 1px double #77A1F9;
+	border-radius:20px;
+	width:50%;
+	margin:auto;
+	box-shadow: -1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+
+div.borderdiv{                   /* Div de centrage */
+	text-align:justify;
+	margin-top:10px;
+	width:450px;
+	padding:10px;
+	border: 1px double #77A1F9;
+	border-radius:20px;
+	box-shadow: -1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+	display:inline-table;
+}
+
+div.borderdiv2{                   /* Div de centrage */
+	text-align:justify;
+	margin-top:10px;
+	width:60%;
+	padding:10px;
+	border: 1px double #77A1F9;
+	border-radius:20px;
+	box-shadow: -1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+	display:inline-table;
+}
+
+div.borderdiv3{                   /* Div de centrage */
+	text-align:justify;
+	margin-top:10px;
+	width:30%;
+	padding:10px;
+	border: 1px double #77A1F9;
+	border-radius:20px;
+	box-shadow: -1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+	display:inline-table;
+}
+
+div.borderdiv4{                   /* Div de centrage */
+	text-align:center;
+	margin-top:10px;
+	width:75%;
+	padding:10px;
+	border: 1px double #77A1F9;
+	border-radius:20px;
+	box-shadow: -1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+	display:inline-table;
+}
+
+div.borderdiv5{                   /* Div de centrage */
+	text-align:center;
+	vertical-align:bottom;
+	margin-left:15px;
+	width:14%;
+	display:inline-table;
+}
+
+div.borderdiv6{                   /* Div de centrage */
+	text-align:center;
+	padding:10px;
+	margin-left:18px;
+	border: 1px double #77A1F9;
+	border-radius:20px;
+	box-shadow: -1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+	display:inline-table;
+}
+
+div.borderdiv7{
+	text-align:right;
+	margin-right:10px;
+	display:block;
+}
+
+div.borderdiv8{                   /* Div de centrage */
+	text-align:center;
+	margin-top:10px;
+	width:95%;
+	min-height:155px;
+	padding:10px 10px 3px 10px;
+	border: 1px double #77A1F9;
+	border-radius:20px;
+	box-shadow: -1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+	display:inline-table;
+}
+
+div.crt{
+	position:absolute;
+	margin-left:10px;
+	width:780px;
+	height:294px;
+	background-image:url(../pics/CRTsmall.png);
+	background-repeat:no-repeat;
+	border: 1px double #77A1F9;
+	border-radius:20px;
+	box-shadow: -1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+	display:inline-table;
+}
+
+.innerbox {
+	overflow:auto;
+	max-height:150px;
+
+}
+
+.innerbox2 {
+	text-align:left;
+	overflow:auto;
+	border-top:	1px solid #77A1F9;
+	max-height:150px;
+}
+
+p.total{
+	text-align:center;
+	font-size:30px;
+	color:#FFFFFF;
+	margin-bottom:0px;
+}
+
+p.totalred{
+	text-align:center;
+	font-size:30px;
+	color:#FF0000;
+	margin-bottom:0px;
+}
+
+
+/* -----------------------------------------------------CSS du menu lateral droit------------------------------------------------------ */
+
+div.wrapper {
+	margin: 20px auto;
+	width: 140px;
+}
+
+nav.vertical {
+	border-radius: 4px;
+	box-shadow: 0 0 10px rgba(0,0,0,.15);
+	overflow: hidden;
+	text-align: center;
+}
+
+nav.vertical > ul {
+	list-style-type: none;
+}
+
+nav.vertical > ul > li {
+	display: block;
+}
+
+nav.vertical > ul > li > label,
+nav.vertical > ul > li > a {
+	background-color: rgb(157, 34, 60);
+	background-image: -webkit-linear-gradient(135deg, rgb(17, 23, 35), rgb(55, 74, 114));
+	background-image: -moz-linear-gradient(135deg, rgb(17, 23, 35), rgb(55, 74, 114));
+	background-image: -o-linear-gradient(135deg, rgb(17, 23, 35), rgb(55, 74, 114));
+	background-image: linear-gradient(135deg, rgb(17, 23, 35), rgb(55, 74, 114));
+	border-bottom: 1px solid rgba(255,255,255,.1);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.1);
+	color: rgb(255,255,255);
+	display: block;
+	font-size: .65rem;
+	font-weight: 500;
+	height: 50px;
+	letter-spacing: .3rem;
+	line-height: 50px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.1);
+	text-transform: uppercase;
+	transition: all .1s ease;
+}
+
+nav.vertical > ul > li > label:hover,
+nav.vertical > ul > li > a:hover {
+	background-color: rgb(114, 51, 98);
+	background-image: -webkit-linear-gradient(150deg, rgb(55, 74, 114), rgb(114, 51, 98));
+	background-image: -moz-linear-gradient(150deg, rgb(55, 74, 114), rgb(114, 51, 98));
+	background-image: -o-linear-gradient(150deg, rgb(55, 74, 114), rgb(114, 51, 98));
+	background-image: linear-gradient(150deg, rgb(55, 74, 114), rgb(114, 51, 98));
+	cursor: pointer;
+}
+
+nav.vertical > ul > li > label + input {
+	display: none;
+	visability: hidden;
+}
+
+nav.vertical > ul > li > div {
+	background-color: rgb(255,255,255);
+	max-height: 0;
+	overflow: hidden;
+	transition: all .5s linear;
+}
+
+nav.vertical > ul > li > label + input:checked + div {
+	max-height: 500px;
+}
+
+nav.vertical > ul > li > div > ul {
+	list-style-type: none;
+}
+
+nav.vertical > ul > li > div > ul > li > a {
+	background-color: rgb(255,255,255);
+	border-bottom: 1px solid rgba(0,0,0,.05);
+	color: #333331;
+	display: block;
+	font-size: .85rem;
+	padding: 10px 0;
+	text-decoration: none;
+	transition: all 0.15s linear;
+}
+
+nav.vertical > ul > li > div > ul > li:hover > a {
+	background-color: lightBlue;
+	color: rgb(255,255,255);
+	padding: 10px 0 10px 50px;
+}
